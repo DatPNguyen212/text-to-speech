@@ -26,3 +26,10 @@ pauseButton.addEventListener('click', (event) => {
     speechSynthesis.pause()
   }
 })
+
+resetButton.addEventListener('click', (event) => {
+  speechSynthesis.resume()
+  speechSynthesis.cancel()
+  inputText.removeAttribute('disabled')
+  inputText.value = ''
+})
