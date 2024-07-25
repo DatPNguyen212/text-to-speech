@@ -1,0 +1,15 @@
+{
+  "name": "text-to-speech-solution",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
