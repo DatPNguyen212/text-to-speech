@@ -25,13 +25,11 @@ playButton.addEventListener('click', (event) => {
 
     utterance.addEventListener('boundary', (event) => {
       currentIndex = event.charIndex
-      console.log(currentIndex)
     })
 
     speedInput.addEventListener('change', (event) => {
       speechSynthesis.cancel()
       utterance.text = utterance.text.slice(currentIndex)
-      console.log(utterance.text)
       utterance.rate = speedInput.value
       speechSynthesis.speak(utterance)
     })
