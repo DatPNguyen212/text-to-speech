@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-input-font-size: 1.5rem;
+  --label-font-size: 1.5rem;
+  --speed-input-font-size: var(--label-font-size);
+  --button-font-size: var(--label-font-size);
+  --text-input-focus-outline-color: hsl(208, 50%, 50%);
+}
+
+body {
+  width: 90vw;
+  height: 50vh;
+  margin: 10px auto;
+}
+
+.text-input {
+  font-size: var(--text-input-font-size);
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.text-input:focus {
+  border: none;
+  outline: 2px solid var(--text-input-focus-outline-color);
+}
+
+.speed-label {
+  border: none;
+  font-size: var(--label-font-size);
+}
+
+.speed-input {
+  font-size: var(--speed-input-font-size);
+}
+
+.button {
+  font-size: var(--button-font-size);
+}
