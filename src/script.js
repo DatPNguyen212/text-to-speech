@@ -7,7 +7,7 @@ const resetButton = document.getElementById('reset-button')
 let currentIndex
 
 playButton.addEventListener('click', (event) => {
-  if (speechSynthesis.speaking) {
+  if (speechSynthesis.speaking && !speechSynthesis.paused) {
     return
   }
 
@@ -25,6 +25,7 @@ playButton.addEventListener('click', (event) => {
 
     utterance.addEventListener('end', (event) => {
       inputText.removeAttribute('disabled')
+      speechSynthesis.cancel()
     })
 
     utterance.addEventListener('boundary', (event) => {
@@ -32,7 +33,7 @@ playButton.addEventListener('click', (event) => {
     })
 
     speedInput.addEventListener('change', (event) => {
-      if (speechSynthesis.speaking) {
+      if (speechSynthesis.speaking && !speechSynthesis.paused) {
         speechSynthesis.cancel()
         utterance.text = utterance.text.slice(currentIndex)
         utterance.rate = speedInput.value
