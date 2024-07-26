@@ -28,13 +28,15 @@ body {
   margin-bottom: 5px;
 }
 
-.text-input:focus {
+.text-input {
   border: none;
+  outline: 1px solid black;
+}
+.text-input:focus {
   outline: 2px solid var(--text-input-focus-outline-color);
 }
 
 .speed-label {
-  border: none;
   font-size: var(--label-font-size);
 }
 
