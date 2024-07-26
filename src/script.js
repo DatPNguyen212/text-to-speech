@@ -54,4 +54,5 @@ resetButton.addEventListener('click', (event) => {
   speechSynthesis.cancel()
   inputText.removeAttribute('disabled')
   inputText.value = ''
+  speedInput.value = '1'
 })
